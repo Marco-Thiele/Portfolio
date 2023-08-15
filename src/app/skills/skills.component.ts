@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
+images = ['0.png', '1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png'];
+imagesName = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Firebase', 'Git', 'CSS', 'Rest-Api', 'Scrum', 'Material design']
 
 }

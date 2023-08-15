@@ -1,0 +1,95 @@
+.position-skill-contant{
+    display: flex;
+    gap: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 300px;
+}
+
+.position-icons{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+
+.icons{
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
+
+.icons-name{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.my-skills{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    min-width: 350px;
+
+    button{
+        color: white;
+        font-size: 23px;
+        background: rgba(0, 190, 232, 1);
+        padding: 15px 30px 15px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(75, 71, 255, 1);
+            scale: 1.1;
+        }
+
+        &:active {
+            background: rgba(255, 255, 255, 1);
+            color: black;
+        }
+    }
+}
+
+.my-skills-position{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-skills-headline{
+    font-size: 90px;
+}
+
+.description{
+    text-align: end;
+}
+
+.line{
+    position: absolute;
+    right: 0;
+    width: 58px;
+    height: 4px;
+    background: rgba(75, 71, 255, 1);
+    margin-top: 58px;
+}
+
+.green-shadow{
+    position: absolute;
+    left: 0px;
+    img {
+        object-fit: cover;
+        margin-left: -546px;
+        transform: rotate(39deg);
+        margin-top: -343px;
+        height: 900px;
+        width: 900px;
+    }
+}

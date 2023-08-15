@@ -1,0 +1,123 @@
+.background-start {
+    background-image: url("../../assets/img/background-start-screen.png");
+    background-size: 3000px, auto, contain;
+    background-position-y: -150px;
+    background-position-x: -200px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding-right: 100px;
+    padding-top: 110px;
+}
+
+
+.profil-img {
+    height: 800px;
+    width: 580px;
+    img{
+        height: 700px;
+    }
+}
+
+.position-title {
+    display: flex;
+    margin-top: -200px;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+        background: rgb(0, 190, 232);
+        font-size: 23px;
+        padding: 15px 30px 15px 30px;
+        color: white;
+        border-radius: 10px;
+        margin-top: 40px;
+        border: unset;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(75, 71, 255, 1);
+            scale: 1.1;
+        }
+
+        &:active {
+            background: rgba(255, 255, 255, 1);
+            color: black;
+
+        }
+    }
+}
+
+.position-title-i-am {
+    color: white;
+    font-size: 64px;
+    transform: rotate(-90deg);
+}
+
+.position-title-name {
+    color: white;
+    font-size: 90px;
+}
+
+.position-title-frontend {
+    color: rgba(75, 71, 255, 1);
+    font-size: 58px;
+
+}
+
+.position-title-imagine {
+    display: flex;
+    align-items: center;
+}
+
+.position-contact-icons{
+    display: flex;
+}
+
+.position-bar{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.bar{
+    width: 100px;
+    height: 4px;
+    background-color: rgb(75, 71, 255);
+    margin-right: 20px;
+}
+
+.contact-icons{
+    img{
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+}
+
+.email{
+    color: white;
+    margin-left: 20px;
+    font-size: 23px;
+}
+
+.position-contact-start{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(27,37,57);
+}
+
+.scroll-down{
+    color: white;
+    display: flex;
+    transform: rotate(90deg);
+    font-size: 23px;
+    max-height: 28px;
+}
+
+.degree{
+    transform: rotate(-90deg);
+    display: flex;
+}

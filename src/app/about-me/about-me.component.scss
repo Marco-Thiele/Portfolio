@@ -1,0 +1,31 @@
+h1 { 
+    font-size: 90px;
+    padding-top: 150px;
+}
+
+.purple-shadow {
+    position: absolute;
+    right: 0px;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        margin-right: -400px;
+    }
+}
+
+.about-me{
+    padding-left: 100px;
+    color: white;
+    width: 400px;
+}
+
+.about-me-icons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    
+    img{
+        padding: 25px;
+    }
+}

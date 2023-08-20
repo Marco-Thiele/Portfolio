@@ -1,1 +1,24 @@
-<p>portfolio works!</p>
+<div class="position-portfolio">
+    <h2>Portfolio</h2>
+    <p>This page is a sample of my work - please feel free to try them out.</p>
+</div>
+<div class="line-portfolio">
+</div>
+
+<div *ngFor="let image of images; let i = index;"  class="position-portfolio-contant" [ngClass]="{'rotate-content': i % 2 === 1}">
+    <div class="img-portfolio">
+        <img src="../../assets/img/portfolio/Pollo loco {{image}}.png" alt="">
+    </div>
+    <div class="portfolio-contant">
+        <h3>{{ imagesName[i] }}</h3>
+        <div>{{ typs[i] }}</div>
+        <p>{{ description[i] }}</p>
+        <div>
+            <button class="live-test">Live test</button>
+            <button class="github">Github</button>
+        </div>
+    </div>
+</div>
+<div class="blue-shadow">
+    <img src="../../assets/img/Vector 5.png" alt="">
+</div>

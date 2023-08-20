@@ -66,6 +66,7 @@
 
 .my-skills-headline{
     font-size: 90px;
+    font-weight: 700;
 }
 
 .description{
@@ -84,6 +85,7 @@
 .green-shadow{
     position: absolute;
     left: 0px;
+    z-index: 5;
     img {
         object-fit: cover;
         margin-left: -546px;

@@ -1,0 +1,43 @@
+<h2>Contact</h2>
+<div class="position-contact">
+    <div class="contact-info">
+        <div>Got a problem to solve?</div>
+        <P>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+            projects with my work.</P>
+        <P>Need a Frontend developer? <b>Contact me!</b></P>
+    </div>
+    <div class="contact-board">
+        <form (submit)="sendMail()" ngNativeValidate method="post" #myForm>
+            <div class="input-container">
+                <input required type="text" name="name" minlength="3" #nameField placeholder="Your name"
+                    (input)="checkInputValue(nameField, 'name')">
+                <div class="icon-container" *ngIf="inputStates['name'].iconSrc">
+                    <img [src]="inputStates['name'].iconSrc" alt="Icon">
+                </div>
+            </div>
+            <div class="input-container">
+                <input required type="email" minlength="3" name="email" #emailField placeholder="Your email"
+                    (input)="checkInputValue(emailField, 'email')">
+                <div class="icon-container" *ngIf="inputStates['email'].iconSrc">
+                    <img [src]="inputStates['email'].iconSrc" alt="Icon">
+                </div>
+            </div>
+            <div class="input-container">
+                <textarea required id="" cols="30" rows="10" name="message" minlength="3" #messageField placeholder="Your message"
+                    (input)="checkInputValue(messageField, 'message')"></textarea>
+                <div class="icon-container-textarea" *ngIf="inputStates['message'].iconSrc">
+                    <img [src]="inputStates['message'].iconSrc" alt="Icon">
+                </div>
+            </div>
+            <button #sendButton>Send message :)</button>
+        </form>
+    </div>
+</div>
+<div class="position-up">
+    <img src="../../assets/img/arrow-up.png" alt="">
+</div>
+<div class="position-vector4">
+    <div>
+        <img src="../../assets/img/Vector 4.png" alt="">
+    </div>
+</div>

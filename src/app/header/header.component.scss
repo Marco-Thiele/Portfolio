@@ -1,6 +1,22 @@
 .position-links{
     display: flex;
     gap: 29px;
+    font-size: 23px;
+
+    div{
+        cursor: pointer;
+        a{
+            text-decoration: none;
+            color: white;
+
+            &:hover{
+                color: rgb(0, 190, 232)
+            }
+        }
+        
+
+       
+    }
 }
 
 .name{

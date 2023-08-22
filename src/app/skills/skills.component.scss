@@ -45,6 +45,10 @@
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
         cursor: pointer;
+        a{
+            text-decoration: none;
+            color: white;
+        }
 
         &:hover {
             background: rgba(75, 71, 255, 1);
@@ -53,7 +57,10 @@
 
         &:active {
             background: rgba(255, 255, 255, 1);
-            color: black;
+            a{
+                color: black;
+            }
+            
         }
     }
 }

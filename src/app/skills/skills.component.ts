@@ -10,7 +10,7 @@ export class SkillsComponent {
   imagesName = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Firebase', 'Git', 'CSS', 'Rest-Api', 'Scrum', 'Material design'];
 
 
-  scrollToSection(sectionId) {
+  scrollToSection(sectionId: string): void{
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
       const offset = -150;
@@ -21,6 +21,7 @@ export class SkillsComponent {
       });
     }
   }
+
 
 
 }

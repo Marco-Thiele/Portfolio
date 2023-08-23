@@ -2,8 +2,9 @@
     padding-left: 100px;
     color: white;
     img{
-        height: 80px;
+        height: 110px;
         width: auto;
+        margin-bottom: -50px;
     }
 }
 
@@ -27,6 +28,34 @@
     }
 }
 
+.second-impre{
+    display: none;
+}
+
 .copy{
     color: white;
+}
+
+@media (max-width: 700px) {
+    .position-footer{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .position-footer-icon{
+        padding-right: unset;
+    }
+    
+    .footer-img{
+        padding-left: unset;
+
+        p{
+            display: none;
+        }
+    }
+
+    .second-impre{
+        display: unset;
+        color: white;
+    }
 }

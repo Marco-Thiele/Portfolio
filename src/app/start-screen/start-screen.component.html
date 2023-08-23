@@ -1,8 +1,10 @@
-<div class="start-screen">
+<div id="startScreen" class="start-screen">
     <div class="background-start">
-        <div class="profil-img">
+        <div class="profil-img-background">
             <img src="../../assets/img/background-image.png" alt="">
+           
         </div>
+        <img class="profil-img" src="../../assets/img/profilimg.png" alt="">
         <div class="position-title">
             <div class="position-title-imagine">
                 <div class="position-title-i-am">
@@ -18,7 +20,7 @@
                 </div>
             </div>
 
-            <button><a href="#" (click)="scrollToSection('contact')" >Let's talk</a></button>
+            <a href="#contact" ><button>Let's talk</button></a>
 
         </div>
     </div>
@@ -31,7 +33,7 @@
         </div>
         <div class="contact-icons">
             <img src="../../assets/img/github.png" alt="">
-            <img src="../../assets/img/email.png" alt="">
+            <a href="#contact" ><img src="../../assets/img/email.png" alt=""></a>
             <img src="../../assets/img/linkedin.png" alt="">
         </div>
         <div class="email">

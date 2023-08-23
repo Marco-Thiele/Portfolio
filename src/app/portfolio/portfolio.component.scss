@@ -6,6 +6,8 @@
     width: 100vw;
     max-width: 100%;
     z-index: 5;
+    padding-top: 100px;
+
     h2 {
         color: white;
         font-size: 90px;
@@ -16,7 +18,7 @@
         padding-right: 30px;
     }
 
-    p{
+    p {
         color: white;
     }
 }
@@ -30,10 +32,16 @@
     margin-top: -174px;
 }
 
-.position-portfolio-contant{
+.position-contant {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.position-portfolio-contant {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 12%;
     width: 100vw;
     max-width: 100%;
 }
@@ -46,42 +54,39 @@
     width: 100vw;
     max-width: 100%;
 
-    .portfolio-contant{
+    .portfolio-contant {
         text-align: end;
     }
 }
 
-.portfolio-contant{
+.portfolio-contant {
     color: white;
     width: 50%;
-    padding-right: 100px;
-    padding-left: 100px;
 
-    h3{
+    h3 {
         font-size: 32px;
         font-weight: 700;
         color: rgba(75, 71, 255, 1);
     }
 
-    div{
+    div {
         font-size: 23px;
         color: rgba(0, 190, 232, 1);
 
     }
 }
 
-.img-portfolio{
+.img-portfolio {
     width: 50%;
-    padding-left: 100px;
-    padding-right: 100px;
     display: flex;
     justify-content: center;
-    img{
+
+    img {
         height: 500px;
     }
 }
 
-.live-test{
+.live-test {
     color: white;
     font-size: 23px;
     background: rgba(75, 71, 255, 1);
@@ -99,7 +104,7 @@
     }
 }
 
-.github{
+.github {
     color: white;
     font-size: 23px;
     background: rgb(20, 29, 47);
@@ -119,9 +124,128 @@
     }
 }
 
-.blue-shadow{
+.blue-shadow {
     position: absolute;
     left: 0px;
     margin-top: -800px;
     z-index: -5;
+}
+
+@media (max-width: 1220px) {
+    .position-portfolio-contant {
+        gap: 7%;
+    }
+
+    .github {
+        margin-left: 50px
+    }
+
+    .blue-shadow {
+        img {
+            height: 850px;
+            margin-top: -120px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .position-portfolio-contant {
+        flex-direction: column;
+    }
+
+    .portfolio-contant {
+        margin-top: -50px;
+        padding-bottom: 50px;
+        text-align: center !important;
+        width: unset;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .blue-shadow {
+        margin-top: -937px;
+
+        img {
+            height: 750px;
+            margin-top: -26px;
+        }
+
+    }
+
+    .position-contant {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    .line-portfolio {
+        width: 88%;
+    }
+}
+
+@media(max-width: 570px) {
+    .line-portfolio {
+        width: 93%;
+    }
+}
+
+@media(max-width: 570px) {
+    .position-portfolio {
+        h2 {
+            font-size: 65px;
+        }
+
+        p {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+    }
+
+    .line-portfolio {
+        margin-top: -139px;
+    }
+
+    .img-portfolio {
+        img {
+            height: 400px;
+        }
+    }
+
+    .blue-shadow {
+        left: -100px;
+    }
+}
+
+@media(max-width: 390px) {
+    .live-test {
+        font-size: 16px;
+    }
+
+    .github {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .img-portfolio {
+        img {
+            height: 300px;
+        }
+    }
+}
+
+@media(max-width: 303px) {
+    .img-portfolio {
+        img {
+            height: 250px;
+        }
+    }
+
+    .live-test {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .github {
+        padding: 10px 20px 10px 20px;
+    }
+
 }

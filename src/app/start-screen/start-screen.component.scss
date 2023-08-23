@@ -1,4 +1,4 @@
-.start-screen{
+.start-screen {
     background-image: linear-gradient(to bottom, #1B2539, #141D2F);
 }
 
@@ -17,12 +17,19 @@
 }
 
 
-.profil-img {
+.profil-img-background {
     height: 800px;
     width: 580px;
-    img{
+
+    img {
         height: 700px;
     }
+}
+
+.profil-img {
+    height: 700px;
+    margin-top: -285px;
+    margin-left: -500px;
 }
 
 .position-title {
@@ -41,7 +48,7 @@
         border: unset;
         cursor: pointer;
 
-        a{
+        a {
             text-decoration: none;
             color: white;
         }
@@ -53,8 +60,8 @@
 
         &:active {
             background: rgba(255, 255, 255, 1);
-            
-            a{
+
+            a {
                 color: black;
             }
 
@@ -84,44 +91,44 @@
     align-items: center;
 }
 
-.position-contact-icons{
+.position-contact-icons {
     display: flex;
 }
 
-.position-bar{
+.position-bar {
     display: flex;
     align-items: center;
     height: 30px;
 }
 
-.bar{
+.bar {
     width: 100px;
     height: 4px;
     background-color: rgb(75, 71, 255);
     margin-right: 20px;
 }
 
-.contact-icons{
-    img{
+.contact-icons {
+    img {
         margin-left: 20px;
         margin-right: 20px;
         cursor: pointer;
     }
 }
 
-.email{
+.email {
     color: white;
     margin-left: 20px;
     font-size: 23px;
 }
 
-.position-contact-start{
+.position-contact-start {
     display: flex;
     justify-content: space-between;
-    background-color:rgb(27,37,57);
+    background-color: rgb(27, 37, 57);
 }
 
-.scroll-down{
+.scroll-down {
     color: white;
     display: flex;
     transform: rotate(90deg);
@@ -129,7 +136,109 @@
     max-height: 28px;
 }
 
-.degree{
+.degree {
     transform: rotate(-90deg);
     display: flex;
+}
+
+@media (max-width: 1510px) {
+    .position-title-i-am {
+        font-size: 50px;
+    }
+
+    .position-title-name {
+        font-size: 64px;
+    }
+
+    .position-title-frontend {
+        font-size: 43px;
+    }
+}
+
+@media (max-width: 1330px) {
+    .position-title-i-am {
+        font-size: 40px;
+    }
+
+    .position-title-name {
+        font-size: 50px;
+    }
+
+    .position-title-frontend {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .profil-img-background {
+        img {
+            height: 650px;
+            margin-left: -50px;
+        }
+    }
+
+    .profil-img {
+        margin-left: -580px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .background-start {
+        flex-direction: column;
+        padding-right: unset;
+    }
+
+    .profil-img {
+        margin-left: unset;
+        margin-top: -900px;
+    }
+
+    .position-title {
+        margin-top: 115px;
+        padding-bottom: 50px;
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 770px) {
+    .email {
+        display: none;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
+
+@media (max-width: 490px) {
+    .position-title-i-am {
+        font-size: 28px;
+    }
+
+    .position-title-name {
+        font-size: 38px;
+    }
+
+    .position-title-frontend {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .position-title-i-am {
+        font-size: 28px;
+    }
+
+    .position-title-name {
+        font-size: 38px;
+    }
+
+    .position-title-frontend {
+        font-size: 25px;
+    }
+
+    .bar{
+        width: 30px;
+    }
 }

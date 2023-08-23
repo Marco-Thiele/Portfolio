@@ -1,18 +1,18 @@
-.position-skill-contant{
+.position-skill-contant {
     display: flex;
-    gap: 50px;
+
     padding-left: 100px;
-    padding-right: 100px;
+    
     margin-top: 300px;
 }
 
-.position-icons{
+.position-icons {
     display: flex;
     flex-wrap: wrap;
     max-width: 60%;
 }
 
-.icons{
+.icons {
     width: 80px;
     height: 100px;
     display: flex;
@@ -23,14 +23,14 @@
     padding-bottom: 50px;
 }
 
-.icons-name{
+.icons-name {
     color: white;
     margin-top: 10px;
     text-align: center;
     font-weight: 700;
 }
 
-.my-skills{
+.my-skills {
     color: white;
     display: flex;
     flex-direction: column;
@@ -38,14 +38,15 @@
     gap: 50px;
     min-width: 350px;
 
-    button{
+    button {
         color: white;
         font-size: 23px;
         background: rgba(0, 190, 232, 1);
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
         cursor: pointer;
-        a{
+
+        a {
             text-decoration: none;
             color: white;
         }
@@ -57,42 +58,56 @@
 
         &:active {
             background: rgba(255, 255, 255, 1);
-            a{
+
+            a {
                 color: black;
             }
-            
+
         }
     }
 }
 
-.my-skills-position{
+.position-second-button {
+    display: none;
+}
+
+.my-skills-position {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.my-skills-headline{
+.my-skills-headline {
     font-size: 90px;
     font-weight: 700;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
-.description{
+.description {
     text-align: end;
+    padding-right: 100px;
 }
 
-.line{
-    position: absolute;
-    right: 0;
+.position-line{
+    width: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.line {
     width: 58px;
     height: 4px;
     background: rgba(75, 71, 255, 1);
-    margin-top: 58px;
 }
 
-.green-shadow{
+.green-shadow {
     position: absolute;
     left: 0px;
     z-index: 5;
+
     img {
         object-fit: cover;
         margin-left: -546px;
@@ -100,5 +115,111 @@
         margin-top: -343px;
         height: 900px;
         width: 900px;
+    }
+}
+
+@media (max-width: 1310px) {
+    .position-icons{
+        max-width: 50%;
+    }
+
+    .icons {
+        padding-right: 75px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .position-skill-contant {
+        flex-direction: column-reverse;
+    }
+
+    .my-skills {
+        align-items: flex-end;
+        min-width: unset;
+
+        button {
+            display: none;
+        }
+    }
+
+    .icons {
+        padding: 15px 20px 15px 20px;
+    }
+
+    .position-icons {
+        max-width: unset;
+        padding-right: 100px;
+        justify-content: center;
+    }
+
+    .position-second-button {
+        display: unset;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+
+        button {
+            color: white;
+            font-size: 23px;
+            background: rgba(0, 190, 232, 1);
+            padding: 15px 30px 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            &:hover {
+                background: rgba(75, 71, 255, 1);
+                scale: 1.1;
+            }
+
+            &:active {
+                background: rgba(255, 255, 255, 1);
+
+                a {
+                    color: black;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .position-skill-contant{
+        padding-left: 20px;
+    }
+
+    .position-icons{
+        padding-right: 20px;
+    }
+
+    .description{
+        padding-right: 30px;
+    }
+
+    .position-line{
+        width: 30px;
+    }
+
+    .line{
+        width: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .my-skills-headline{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 330px) {
+    .my-skills-headline{
+        font-size: 45px;
     }
 }

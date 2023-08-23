@@ -4,18 +4,20 @@
 </div>
 <div class="line-portfolio">
 </div>
-
-<div *ngFor="let image of images; let i = index;"  class="position-portfolio-contant" [ngClass]="{'rotate-content': i % 2 === 1}">
-    <div class="img-portfolio">
-        <img src="../../assets/img/portfolio/Pollo loco {{image}}.png" alt="">
-    </div>
-    <div class="portfolio-contant">
-        <h3>{{ imagesName[i] }}</h3>
-        <div>{{ typs[i] }}</div>
-        <p>{{ description[i] }}</p>
-        <div>
-            <button class="live-test">Live test</button>
-            <button class="github">Github</button>
+<div class="position-contant">
+    <div *ngFor="let image of images; let i = index;" class="position-portfolio-contant"
+        [ngClass]="{'rotate-content': i % 2 === 1}">
+        <div class="img-portfolio">
+            <img src="../../assets/img/portfolio/Pollo loco {{image}}.png" alt="">
+        </div>
+        <div class="portfolio-contant">
+            <h3>{{ imagesName[i] }}</h3>
+            <div>{{ typs[i] }}</div>
+            <p>{{ description[i] }}</p>
+            <div>
+                <button class="live-test">Live test</button>
+                <button class="github">Github</button>
+            </div>
         </div>
     </div>
 </div>

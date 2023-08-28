@@ -1,13 +1,17 @@
-.start-screen {
-    background-image: linear-gradient(to bottom, #1B2539, #141D2F);
+.background-start-img{
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    img{
+        width: 100%;
+        height: 400px;
+    }
 }
 
+
+
 .background-start {
-    background-image: url("../../assets/img/background-start-screen.png");
-    background-size: 3000px, auto, contain;
-    background-position-y: -150px;
-    background-position-x: -200px;
-    background-repeat: no-repeat;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,17 +23,24 @@
 
 .profil-img-background {
     height: 800px;
-    width: 580px;
+    width: 880px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
 
     img {
         height: 700px;
+        object-fit: contain;
+        
     }
 }
 
 .profil-img {
-    height: 700px;
-    margin-top: -285px;
-    margin-left: -500px;
+    height: 600px;
+    margin-top: -185px;
+    margin-left: -700px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .position-title {
@@ -37,6 +48,7 @@
     margin-top: -200px;
     align-items: center;
     flex-direction: column;
+    z-index: 10;
 
     button {
         background: rgb(0, 190, 232);
@@ -113,6 +125,9 @@
         margin-left: 20px;
         margin-right: 20px;
         cursor: pointer;
+        &:hover{
+            transform: scale(1.5);
+        }
     }
 }
 
@@ -125,7 +140,6 @@
 .position-contact-start {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(27, 37, 57);
 }
 
 .scroll-down {
@@ -173,12 +187,12 @@
     .profil-img-background {
         img {
             height: 650px;
-            margin-left: -50px;
+            margin-left: -250px;
         }
     }
 
     .profil-img {
-        margin-left: -580px;
+        margin-left: -850px;
     }
 }
 
@@ -190,15 +204,27 @@
     }
 
     .profil-img {
-        margin-left: unset;
-        margin-top: -900px;
+        margin-left: -30px;
+        margin-top: -800px;
+    
     }
 
     .position-title {
-        margin-top: 115px;
+        margin-top: 20px;
         padding-bottom: 50px;
         margin-left: -20px;
     }
+
+    .profil-img-background {
+        img {
+            height: 650px;
+            margin-left: unset;
+            max-width: 100%;
+            margin-top: -100px;
+        
+        }
+    }
+    
 }
 
 @media (max-width: 770px) {
@@ -240,5 +266,9 @@
 
     .bar{
         width: 30px;
+    }
+
+    .profil-img{
+        margin-top: -750px;
     }
 }

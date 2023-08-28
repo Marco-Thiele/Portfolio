@@ -1,8 +1,11 @@
 <div class="position-header">
     <div class="name">
-         <img src="../../assets/img/logo-marco.png" alt=""> 
+        <a href="#startScreen"><img src="../../assets/img/logo-marco.png" alt=""></a>
     </div>
-    <div class="position-links">
+    <div class="mobile-nav-bar">
+        <img  (click)="toggleMenu()" src="../../assets/img/burger menu.png" alt="">
+    </div>
+    <div id="menu-toggle" class="position-links">
         <div>
             <a href="#aboutMe"> About me</a>
         </div>
@@ -12,5 +15,9 @@
         <div>
             <a href="#portfolio">Portfolio</a>
         </div>
+        <div class="contact">
+            <a href="#contact">Contact</a>
+        </div>
+
     </div>
 </div>

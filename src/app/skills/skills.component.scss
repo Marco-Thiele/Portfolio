@@ -1,15 +1,14 @@
 .position-skill-contant {
     display: flex;
-
     padding-left: 100px;
-    
-    margin-top: 300px;
+    margin-top: 150px;
 }
 
 .position-icons {
     display: flex;
     flex-wrap: wrap;
     max-width: 60%;
+    z-index: 10;
 }
 
 .icons {
@@ -21,6 +20,13 @@
     justify-content: center;
     padding-right: 100px;
     padding-bottom: 50px;
+    img{
+        transition: transform 100ms ease-out;
+
+        &:hover{
+            transform: translateY(-10px);
+        }
+    }
 }
 
 .icons-name {
@@ -28,6 +34,7 @@
     margin-top: 10px;
     text-align: center;
     font-weight: 700;
+    cursor: default;
 }
 
 .my-skills {
@@ -115,6 +122,7 @@
         margin-top: -343px;
         height: 900px;
         width: 900px;
+        max-width: 100%;
     }
 }
 
@@ -166,6 +174,8 @@
             padding: 15px 30px 15px 30px;
             border-radius: 10px;
             cursor: pointer;
+            position: relative;
+            z-index: 10;
 
             a {
                 text-decoration: none;
@@ -221,5 +231,9 @@
 @media (max-width: 330px) {
     .my-skills-headline{
         font-size: 45px;
+    }
+
+    .position-icons{
+        padding-right: unset;
     }
 }

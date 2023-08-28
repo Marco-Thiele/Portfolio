@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  toggleMenu(){
+    let menu = document.getElementById('menu-toggle');
+    menu.classList.toggle('transform');
+    
+  }
+
+
 }

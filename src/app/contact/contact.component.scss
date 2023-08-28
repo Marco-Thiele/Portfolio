@@ -118,8 +118,9 @@ form {
     margin-top: -300px;
     transform: rotate(-51deg);
     margin-left: -303px;
-    width: 500px;
+    width: 382px;
     z-index: -2;
+    margin-top: -176px;
 
     img {
         position: absolute;
@@ -127,7 +128,7 @@ form {
         height: auto;
         left: 0;
         top: 0;
-       
+       max-width: 100%;
     }
 }
 

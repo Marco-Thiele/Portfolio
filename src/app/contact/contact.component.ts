@@ -1,18 +1,11 @@
-import { Component, ElementRef, Renderer2, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
-
-  inputStates: { [key: string]: { iconSrc: string, valid: boolean } } = {
-    name: { iconSrc: '', valid: true },
-    email: { iconSrc: '', valid: true },
-    message: { iconSrc: '', valid: true }
-  };
-
+export class ContactComponent implements OnInit {
 
   @ViewChildren('myForm') myForm: ElementRef | undefined;
   @ViewChildren('nameField') nameField: ElementRef | undefined;
@@ -23,6 +16,21 @@ export class ContactComponent {
 
 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
+  
+  ngOnInit(): void{
+
+  }
+
+
+  inputStates: { [key: string]: { iconSrc: string, valid: boolean } } = {
+    name: { iconSrc: '', valid: true },
+    email: { iconSrc: '', valid: true },
+    message: { iconSrc: '', valid: true }
+  };
+
+
+
+
 
 
   async sendMail() {
@@ -39,9 +47,9 @@ export class ContactComponent {
 
     let fd = new FormData();
     fd.append('name', nameField.value);
-    fd.append('name', emailField.value);
+    fd.append('email', emailField.value);
     fd.append('message', messageField.value);
-    await fetch('//action= Url Dateipfad zum Server',
+    await fetch('https://marco-thiele.com/send_mail/send_mail.php',
       {
         method: 'Post',
         body: fd
@@ -53,6 +61,7 @@ export class ContactComponent {
     // Text anzeigen Nachricht gesendet
     nameField.disabled = false;
     messageField.disabled = false;
+    emailField.disabled = false;
     sendButton.disabled = false;
   }
 

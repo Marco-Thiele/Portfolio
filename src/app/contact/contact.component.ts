@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -7,20 +7,14 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChildren } from '@angular
 })
 export class ContactComponent implements OnInit {
 
-  @ViewChildren('myForm') myForm: ElementRef | undefined;
-  @ViewChildren('nameField') nameField: ElementRef | undefined;
-  @ViewChildren('messageField') messageField: ElementRef | undefined;
-  @ViewChildren('emailField') emailField: ElementRef | undefined;
-  @ViewChildren('sendButton') sendButton: ElementRef | undefined;
+  @ViewChild('myForm') myForm: ElementRef | undefined;
+  @ViewChild('nameField') nameField: ElementRef | undefined;
+  @ViewChild('messageField') messageField: ElementRef | undefined;
+  @ViewChild('emailField') emailField: ElementRef | undefined;
+  @ViewChild('sendButton') sendButton: ElementRef | undefined;
+  @ViewChild('mySpinner') mySpinner: ElementRef | undefined;
+  @ViewChild('myLoader') myLoader: ElementRef | undefined;
   iconSrc: string = '';
-
-
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
-  
-  ngOnInit(): void{
-
-  }
-
 
   inputStates: { [key: string]: { iconSrc: string, valid: boolean } } = {
     name: { iconSrc: '', valid: true },
@@ -28,23 +22,30 @@ export class ContactComponent implements OnInit {
     message: { iconSrc: '', valid: true }
   };
 
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
 
+  ngOnInit(): void {
 
-
+  }
 
 
   async sendMail() {
-    //action= Url Dateipfad zum Server
-    let nameField = this.nameField.nativeElement
-    let emailField = this.emailField.nativeElement
-    let messageField = this.messageField.nativeElement
-    let sendButton = this.sendButton.nativeElement
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
-    // Animation anzeigen
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
+    this.disableForm(nameField, emailField, messageField, sendButton);
+    this.startSendAnimation();
+    this.sendMailToServer(nameField, emailField, messageField)
+    this.clearField(nameField, emailField, messageField)
+    this.endSendAnimation()
+    this.ableForm(nameField, emailField, messageField, sendButton)
+    // Text anzeigen Nachricht gesendet
 
+  }
+
+
+  async sendMailToServer(nameField, emailField, messageField){
     let fd = new FormData();
     fd.append('name', nameField.value);
     fd.append('email', emailField.value);
@@ -55,10 +56,18 @@ export class ContactComponent implements OnInit {
         body: fd
       }
     )
+  }
 
 
+  disableForm(nameField, emailField, messageField, sendButton) {
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+  }
 
-    // Text anzeigen Nachricht gesendet
+
+  ableForm(nameField, emailField, messageField, sendButton) {
     nameField.disabled = false;
     messageField.disabled = false;
     emailField.disabled = false;
@@ -66,9 +75,27 @@ export class ContactComponent implements OnInit {
   }
 
 
+  clearField(nameField, emailField, messageField) {
+    nameField.value = '';
+    messageField.value = '';
+    emailField.value = '';
+  }
+
+
+  startSendAnimation() {
+    this.addCssClass(this.mySpinner.nativeElement, 'spinner');
+    this.addCssClass(this.myLoader.nativeElement, 'loader');
+  }
+
+  
+  endSendAnimation() {
+    this.removeCssClass(this.mySpinner.nativeElement, 'spinner');
+    this.removeCssClass(this.myLoader.nativeElement, 'loader');
+  }
+
+
   checkInputValue(inputField: HTMLInputElement | HTMLTextAreaElement, fieldName: string) {
     const inputValue = inputField.value;
-
     if (inputValue.length < 3) {
       this.inputStates[fieldName].iconSrc = '../../assets/img/danger.png';
       this.inputStates[fieldName].valid = false;
@@ -86,12 +113,9 @@ export class ContactComponent implements OnInit {
   private addCssClass(element: HTMLElement, className: string) {
     this.renderer.addClass(element, className);
   }
-  
+
+
   private removeCssClass(element: HTMLElement, className: string) {
     this.renderer.removeClass(element, className);
-
-
-
-
-}
+  }
 }

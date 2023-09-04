@@ -15,7 +15,12 @@ export class PortfolioComponent {
 
 
 
-  showGithub(i) {
+  /**
+   * show the correct github
+   * 
+   * @param i number
+   */  
+  showGithub(i: number) {
     if (i == 0) {
       window.open('https://github.com/Marco-Thiele/Join-Portfolio');
     }
@@ -24,6 +29,24 @@ export class PortfolioComponent {
     }
     if (i == 2) {
       window.open('https://github.com/Marco-Thiele/Pokedex');
+    }
+  }
+
+
+  /**
+   * show the correct live demo
+   * 
+   * @param i number
+   */
+  showApp(i: number){
+    if (i == 0) {
+      window.open('https://marco-thiele.com/Join-Portfolio/index.html');
+    }
+    if (i == 1) {
+      window.open('https://marco-thiele.com/EL_PoLLo_Loco/index.html');
+    }
+    if (i == 2) {
+      window.open('https://marco-thiele.com/Pokedex/index.html');
     }
   }
 }

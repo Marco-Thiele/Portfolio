@@ -116,11 +116,11 @@
     z-index: 5;
 
     img {
-        object-fit: cover;
-        margin-left: -546px;
+        object-fit: contain;
+        margin-left: -246px;
         transform: rotate(39deg);
         margin-top: -343px;
-        height: 900px;
+        height: 700px;
         width: 900px;
         max-width: 100%;
     }
@@ -220,11 +220,19 @@
     .line{
         width: 20px;
     }
+
+    
 }
 
 @media (max-width: 450px) {
     .my-skills-headline{
         font-size: 60px;
+    }
+
+    .green-shadow {
+        img {  
+            margin-left: -200px;
+        }
     }
 }
 
@@ -235,5 +243,11 @@
 
     .position-icons{
         padding-right: unset;
+    }
+
+    .green-shadow {
+        img {  
+            margin-left: -150px;
+        }
     }
 }

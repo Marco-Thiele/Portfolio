@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class StartScreenComponent {
 
+
+  /**
+   * Scroll to a position with an offset
+   * 
+   * @param sectionId string
+   */
   scrollToSection(sectionId: string): void{
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {

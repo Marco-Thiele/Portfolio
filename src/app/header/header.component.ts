@@ -7,11 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+
+  /**
+   * Toggle navbar
+   * 
+   */
   toggleMenu(){
     let menu = document.getElementById('menu-toggle');
-    menu.classList.toggle('transform');
-    
+    menu.classList.toggle('transform');  
   }
-
-
 }

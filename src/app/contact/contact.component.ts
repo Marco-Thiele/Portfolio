@@ -29,10 +29,10 @@ export class ContactComponent implements OnInit {
 
   }
 
-/**
- * initialized all viewchilds and functions for sending form 
- * 
- */
+  /**
+   * initialized all viewchilds and functions for sending form 
+   * 
+   */
   async sendMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
@@ -55,7 +55,7 @@ export class ContactComponent implements OnInit {
    * @param emailField ElementRef
    * @param messageField ElementRef 
    */
-  async sendMailToServer(nameField: { value: string | Blob; }, emailField: { value: string | Blob; }, messageField: { value: string | Blob; }){
+  async sendMailToServer(nameField: { value: string | Blob; }, emailField: { value: string | Blob; }, messageField: { value: string | Blob; }) {
     let fd = new FormData();
     fd.append('name', nameField.value);
     fd.append('email', emailField.value);
@@ -112,6 +112,22 @@ export class ContactComponent implements OnInit {
     nameField.value = '';
     messageField.value = '';
     emailField.value = '';
+    this.clearInputValue();
+
+  }
+
+
+  clearInputValue() {
+    this.removeCssClass(this.nameField.nativeElement, 'correct-input');
+    this.removeCssClass(this.emailField.nativeElement, 'correct-input');
+    this.removeCssClass(this.messageField.nativeElement, 'correct-input');
+    this.removeCssClass(this.nameField.nativeElement, 'wrong-input');
+    this.removeCssClass(this.emailField.nativeElement, 'wrong-input');
+    this.removeCssClass(this.messageField.nativeElement, 'wrong-input');
+    this.iconSrc = '';
+    this.checkInputValue(this.nameField.nativeElement, 'name')
+    this.checkInputValue(this.emailField.nativeElement, 'email')
+    this.checkInputValue(this.messageField.nativeElement, 'message')
   }
 
 
@@ -124,7 +140,7 @@ export class ContactComponent implements OnInit {
     this.addCssClass(this.myLoader.nativeElement, 'loader');
   }
 
-  
+
   /**
    * Stop the animation
    * 
@@ -135,15 +151,17 @@ export class ContactComponent implements OnInit {
   }
 
 
-/**
- *Checked if the input values are long enough
- *  
- * @param inputField ElementRef
- * @param fieldName ElementRef
- */
+  /**
+   *Checked if the input values are long enough
+   *  
+   * @param inputField ElementRef
+   * @param fieldName ElementRef
+   */
   checkInputValue(inputField: HTMLInputElement | HTMLTextAreaElement, fieldName: string) {
     const inputValue = inputField.value;
-    if (inputValue.length < 3) {
+    if (inputValue.length == 0) {
+      this.inputStates[fieldName].iconSrc = '';
+    }else if (inputValue.length > 0 && inputValue.length < 3) {
       this.inputStates[fieldName].iconSrc = '../../assets/img/danger.png';
       this.inputStates[fieldName].valid = false;
       this.addCssClass(inputField, 'wrong-input');
@@ -161,7 +179,7 @@ export class ContactComponent implements OnInit {
    * show that a messagefield when it was succsessfully 
    * 
    */
-  massegeSuccsess(){
+  massegeSuccsess() {
     this.removeCssClass(this.messageSuccessfully.nativeElement, 'd-none');
     setTimeout(() => {
       this.addCssClass(this.messageSuccessfully.nativeElement, 'd-none');

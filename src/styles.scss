@@ -1,11 +1,35 @@
-body{
+body {
     margin: 0;
-    background-color: rgb(20,29,47);
+    background-color: rgb(20, 29, 47);
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    /*scrollbar-color: #141D2F #1F2A40;*/
+ 
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #1f2a40 #141d2f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #141d2f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #1f2a40;
+    border-radius: 41px;
+    border: 0px solid #ffffff;
+  }

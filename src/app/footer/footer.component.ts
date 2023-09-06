@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
+
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  constructor(private router: Router, public sharedService: SharedService) { }
+
+  navigateToImpressum() {
+    console.log(this.sharedService.impressum)
+    this.sharedService.impressum = true
+    console.log(this.sharedService.impressum)
+  }
 }

@@ -57,8 +57,7 @@ export class ContactComponent implements OnInit {
    */
   async sendMailToServer(nameField: { value: string | Blob; }, emailField: { value: string | Blob; }, messageField: { value: string | Blob; }) {
     let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('email', emailField.value);
+    fd.append('name', emailField.value);
     fd.append('message', messageField.value);
     await fetch('https://marco-thiele.com/send_mail/send_mail.php',
       {

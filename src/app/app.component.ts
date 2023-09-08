@@ -8,7 +8,6 @@ import { SharedService } from './shared.service';
 })
 export class AppComponent {
   title = 'Portfolio';
-  impressum = this.sharedService.impressum
   constructor(public sharedService: SharedService) {}
 
 }

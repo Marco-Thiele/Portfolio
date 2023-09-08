@@ -1,8 +1,8 @@
 <app-header></app-header>
-<app-start-screen *ngIf="!impressum"></app-start-screen>
-<app-about-me *ngIf="!impressum"></app-about-me>
-<app-skills *ngIf="!impressum"></app-skills>
-<app-portfolio *ngIf="!impressum"></app-portfolio>
-<app-contact *ngIf="!impressum"></app-contact>
-<app-impressum *ngIf="impressum"></app-impressum>
+<app-start-screen *ngIf="!sharedService.impressum"></app-start-screen>
+<app-about-me *ngIf="!sharedService.impressum"></app-about-me>
+<app-skills *ngIf="!sharedService.impressum"></app-skills>
+<app-portfolio *ngIf="!sharedService.impressum"></app-portfolio>
+<app-contact *ngIf="!sharedService.impressum"></app-contact>
+<app-impressum *ngIf="sharedService.impressum"></app-impressum>
 <app-footer></app-footer>

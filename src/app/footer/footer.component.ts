@@ -13,8 +13,6 @@ export class FooterComponent {
   constructor(private router: Router, public sharedService: SharedService) { }
 
   navigateToImpressum() {
-    console.log(this.sharedService.impressum)
     this.sharedService.impressum = true
-    console.log(this.sharedService.impressum)
   }
 }

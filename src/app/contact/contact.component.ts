@@ -155,23 +155,45 @@ export class ContactComponent implements OnInit {
    *Checked if the input values are long enough
    *  
    * @param inputField ElementRef
-   * @param fieldName ElementRef
+   * @param fieldName String
    */
   checkInputValue(inputField: HTMLInputElement | HTMLTextAreaElement, fieldName: string) {
     const inputValue = inputField.value;
     if (inputValue.length == 0) {
       this.inputStates[fieldName].iconSrc = '';
     }else if (inputValue.length > 0 && inputValue.length < 3) {
-      this.inputStates[fieldName].iconSrc = '../../assets/img/danger.png';
-      this.inputStates[fieldName].valid = false;
-      this.addCssClass(inputField, 'wrong-input');
-      this.removeCssClass(inputField, 'correct-input');
+      this.checkInputValueWrong(inputField, fieldName)
     } else {
-      this.inputStates[fieldName].iconSrc = '../../assets/img/correct.png';
-      this.inputStates[fieldName].valid = true;
-      this.removeCssClass(inputField, 'wrong-input');
-      this.addCssClass(inputField, 'correct-input');
+      this.checkInputValueCorrect(inputField, fieldName)
     }
+  }
+
+
+  /**
+   * Set the Inputfield to wrong
+   * 
+   * @param inputField ElementRef
+   * @param fieldName String
+   */
+  checkInputValueWrong(inputField: HTMLInputElement | HTMLTextAreaElement, fieldName: string){
+    this.inputStates[fieldName].iconSrc = '../../assets/img/danger.png';
+    this.inputStates[fieldName].valid = false;
+    this.addCssClass(inputField, 'wrong-input');
+    this.removeCssClass(inputField, 'correct-input');
+  }
+
+
+  /**
+   * Set the Inputfield to correct
+   * 
+   * @param inputField ElementRef
+   * @param fieldName String
+   */
+  checkInputValueCorrect(inputField: HTMLInputElement | HTMLTextAreaElement, fieldName: string){
+    this.inputStates[fieldName].iconSrc = '../../assets/img/correct.png';
+    this.inputStates[fieldName].valid = true;
+    this.removeCssClass(inputField, 'wrong-input');
+    this.addCssClass(inputField, 'correct-input');
   }
 
 

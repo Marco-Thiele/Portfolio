@@ -10,7 +10,6 @@
 
 .hight-start-screen{
     min-height: 100vh;
-    max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -278,13 +277,11 @@
         width: 30px;
     }
 
-    .profil-img{
-        margin-top: -550px;
-    }
-
-    .profil-img-background {
-        img {
-            margin-top: 100px;
+    .background-start-img{
+        top: 500px;
+        overflow: hidden;
+        img{
+            width: unset;
         }
     }
 }

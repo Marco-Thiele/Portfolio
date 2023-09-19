@@ -7,7 +7,7 @@ import { SharedService } from './shared.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Portfolio';
+  title = 'Marco Thiele | Frontend developer | Freiberg, Germany';
   constructor(public sharedService: SharedService) {}
 
 }

@@ -63,6 +63,7 @@
         color: white;
         border-radius: 10px;
         margin-top: 40px;
+        margin-bottom: 30px;
         border: unset;
         cursor: pointer;
 
@@ -96,6 +97,10 @@
 .position-title-name {
     color: white;
     font-size: 90px;
+    h1{
+        font-size: 90px;
+        margin: 0;
+    } 
 }
 
 .position-title-frontend {
@@ -171,6 +176,9 @@
 
     .position-title-name {
         font-size: 64px;
+        h1{
+            font-size: 64px;
+        }
     }
 
     .position-title-frontend {
@@ -185,6 +193,9 @@
 
     .position-title-name {
         font-size: 50px;
+        h1{
+            font-size: 50px;
+        }
     }
 
     .position-title-frontend {
@@ -253,6 +264,9 @@
 
     .position-title-name {
         font-size: 38px;
+        h1{
+            font-size: 38px;
+        }
     }
 
     .position-title-frontend {

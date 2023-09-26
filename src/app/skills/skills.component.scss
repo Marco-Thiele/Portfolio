@@ -1,6 +1,6 @@
 .position-skill-contant {
     display: flex;
-    padding-left: 100px;
+    padding-left: 250px;
     margin-top: 150px;
 }
 
@@ -52,6 +52,7 @@
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
         cursor: pointer;
+        margin-right: 250px;
 
         a {
             text-decoration: none;
@@ -94,18 +95,18 @@
 
 .description {
     text-align: end;
-    padding-right: 100px;
+    padding-right: 250px;
 }
 
 .position-line{
-    width: 100px;
+    width: 237px;
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
 .line {
-    width: 58px;
+    width: 200px;
     height: 4px;
     background: rgba(75, 71, 255, 1);
 }
@@ -124,6 +125,30 @@
         width: 900px;
         max-width: 100%;
     }
+}
+
+@media (max-width: 1800px) {
+   .position-skill-contant{
+    padding-left: 100px;
+   }
+
+   .position-line{
+    width: 100px;
+   }
+
+   .line{
+    width: 58px;
+   }
+
+   .description{
+    padding-right: 100px;
+   }
+
+   .my-skills {
+    button{
+        margin-right: unset;
+    }
+   }
 }
 
 @media (max-width: 1310px) {

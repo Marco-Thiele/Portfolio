@@ -7,11 +7,12 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
   images = ['1', '2', '3']
-  imagesName = ['Join', 'El Pollo Loco', 'Pokedex'];
-  typs = ['JavaScript | CSS | HTML', 'JavaScript | CSS | HTML', 'JavaScript | CSS | HTML | Api'];
-  description = ['Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
+  imagesName = ['DABubble','Join', 'El Pollo Loco'];
+  typs = ['Angular | TypeScript | Firebase','JavaScript | CSS | HTML', 'JavaScript | CSS | HTML'];
+  description = [ 'Chat messanger inspired by Slack. Contact your colleagues and exchange ideas with them.',
+    'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
     'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-    'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'];
+    ];
 
 
 
@@ -22,13 +23,13 @@ export class PortfolioComponent {
    */  
   showGithub(i: number) {
     if (i == 0) {
-      window.open('https://github.com/Marco-Thiele/Join-Portfolio');
+      window.open('https://github.com/Marco-Thiele/DABubble-Portfolio');
     }
     if (i == 1) {
-      window.open('https://github.com/Marco-Thiele/El-Pollo-Locco');
+      window.open('https://github.com/Marco-Thiele/Join-Portfolio');
     }
     if (i == 2) {
-      window.open('https://github.com/Marco-Thiele/Pokedex');
+      window.open('https://github.com/Marco-Thiele/El-Pollo-Locco');
     }
   }
 
@@ -40,13 +41,13 @@ export class PortfolioComponent {
    */
   showApp(i: number){
     if (i == 0) {
-      window.open('https://marco-thiele.com/Join-Portfolio/index.html');
+      window.open('https://dabubble.marco-thiele.com');
     }
     if (i == 1) {
-      window.open('https://marco-thiele.com/EL_PoLLo_Loco/index.html');
+      window.open('https://marco-thiele.com/Join-Portfolio/index.html');
     }
     if (i == 2) {
-      window.open('https://marco-thiele.com/Pokedex/index.html');
+      window.open('https://marco-thiele.com/EL_PoLLo_Loco/index.html');
     }
   }
 }

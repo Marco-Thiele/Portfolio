@@ -70,6 +70,12 @@ h1 {
     
 }
 
+@media (min-width: 2600px) {
+    .about-me{
+        width: 700px;
+    }
+}
+
 @media (max-width: 1800px) {
     .about-me{
         padding-left: 100px;

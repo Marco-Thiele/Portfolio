@@ -170,6 +170,48 @@
     display: flex;
 }
 
+@media (min-width: 1900px) {
+    .background-start-img{
+        img{
+            height: 600px;
+        }  
+    }
+}
+
+@media (min-width: 2300px) {
+    .background-start-img{
+        img{
+            height: 800px;
+        }  
+    }
+    .profil-img{
+        height: 700px;
+        margin-left: -750px;
+    }
+
+    .profil-img-background{
+        img{
+            height: 800px;
+        }
+    }
+}
+
+@media (min-width: 2600px) {
+    .background-start-img{
+        img{
+            height: 1000px;
+        }  
+    }
+}
+
+@media (min-width: 3000px) {
+    .background-start-img{
+        img{
+            height: 1200px;
+        }  
+    }
+}
+
 @media (max-width: 1800px) {
     .background-start{
         padding-left: unset;
